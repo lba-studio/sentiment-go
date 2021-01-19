@@ -1,7 +1,9 @@
 version: "3.9"
 services:
   web:
-    build: .
+    image: public.ecr.aws/t5m8k1a3/sentiment-go:latest
     ports:
       - "8080:8080"
     restart: always
+    volumes:
+      - ~/.aws/:/root/.aws:ro
